@@ -175,7 +175,7 @@ Addressing the recommendations above will significantly improve the security pos
 
 **Author:** Yannick Mbiatem  
 **Cybersecurity Intern – B084**  
-**LinkedIn:** [Your LinkedIn Link]  
+**LinkedIn:** [https://www.linkedin.com/in/yannick-mbiatem-81ba153b6/]  
 
 **Project Information**  
 - Program: Cybersecurity program at Networkwalks  
