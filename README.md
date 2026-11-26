@@ -24,7 +24,7 @@ I have performed these activities only on the systems & devices where I had secu
 
 ## 2. Executive Summary
 
-Between **[Start Date]** and **[End Date]**, a black-box penetration test was conducted against the Mediroza General Hospital web infrastructure. The objective was to identify vulnerabilities, exploit them to demonstrate real-world impact, and retrieve specific confidential data as outlined by the client.
+Between **[23/11/2026]** and **[26/11/2026]**, a black-box penetration test was conducted against the Mediroza General Hospital web infrastructure. The objective was to identify vulnerabilities, exploit them to demonstrate real-world impact, and retrieve specific confidential data as outlined by the client.
 
 The assessment revealed critical vulnerabilities that allowed for full authentication bypass and unauthorized access to sensitive patient and staff data. The most severe findings included:
 
@@ -64,7 +64,9 @@ Before attempting to attack the web application, I performed initial reconnaissa
   The scan revealed the site is hosted on a **LiteSpeed** web server, uses HTML5, and the server IP is `199.188.201.16`. It also returned a 301 redirect and 403 Forbidden headers.
 
 **Evidence:**  
-*(Insert screenshots of WHOIS and WhatWeb results here)*
+![](cp19.JPG)
+
+![](cp20.JPG)
 
 #### Phase 2: Authentication Bypass (SQL Injection)
 After mapping the site, I navigated to the Patient Portal (`/patient/login.php`) to analyze the authentication mechanism.
@@ -74,7 +76,12 @@ After mapping the site, I navigated to the Patient Portal (`/patient/login.php`)
 - **Impact:** Unauthorized access to restricted patient areas. I successfully accessed the portal and retrieved **three (3) confidential patient PDF lab reports**.
 
 **Evidence:**  
-*(Insert screenshots of the SQL Injection payload and successful login here)*
+
+![](cp18.JPG)
+
+![](cp1.JPG)
+
+![](cp2.JPG)
 
 ---
 
@@ -85,7 +92,20 @@ After mapping the site, I navigated to the Patient Portal (`/patient/login.php`)
 - **Impact:** Loss of confidentiality regarding patient medical records.
 
 **Evidence:**  
-*(Insert screenshots of hash extraction and successful password cracking here)*
+
+![](cp4.JPG)
+
+![](cp5.JPG)
+
+![](cp6.JPG)
+
+![](cp7.JPG)
+
+![](cp8.JPG)
+
+![](cp9.JPG)
+
+![](cp10.JPG)
 
 ---
 
@@ -104,7 +124,14 @@ The `Disallow: /old/` directive revealed a hidden legacy directory. Navigating t
 - **Impact:** Massive data breach. The `.sql` file opened as plain text in the browser and contained unencrypted plaintext data, including monthly salaries of all hospital employees and personal details of hospital shareholders.
 
 **Evidence:**  
-*(Insert screenshots of robots.txt, directory listing, and the exposed .sql file content here)*
+
+![](cp14.JPG)
+
+![](cp15.JPG)
+
+![](cp16.JPG)
+
+![](cp17.JPG)
 
 ---
 
@@ -153,4 +180,4 @@ Addressing the recommendations above will significantly improve the security pos
 **Project Information**  
 - Program: Cybersecurity program at Networkwalks  
 - Week: 04  
-- Repository: GitHub
+
